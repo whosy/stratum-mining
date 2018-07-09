@@ -54,7 +54,7 @@ LOGDIR = 'log/'
 LOGFILE = None      # eg. 'stratum.log'
 LOGLEVEL = 'DEBUG'
 # Logging Rotation can be enabled with the following settings
-# It if not enabled here, you can set up logrotate to rotate the files. 
+# It if not enabled here, you can set up logrotate to rotate the files.
 # For built in log rotation set LOG_ROTATION = True and configure the variables
 LOG_ROTATION = True
 LOG_SIZE = 10485760 # Rotate every 10M
@@ -149,10 +149,10 @@ VARIABLE_DIFF = True            # Master variable difficulty enable
 
 # Variable diff tuning variables
 #VARDIFF will start at the POOL_TARGET. It can go as low as the VDIFF_MIN and as high as min(VDIFF_MAX or coindaemons difficulty)
-USE_COINDAEMON_DIFF = False     # Set the maximum difficulty to the coindaemon difficulty. 
+USE_COINDAEMON_DIFF = False     # Set the maximum difficulty to the coindaemon difficulty.
 DIFF_UPDATE_FREQUENCY = 86400   # Update the coindaemon difficulty once a day for the VARDIFF maximum
-VDIFF_MIN_TARGET = 16           # Minimum target difficulty 
-VDIFF_MAX_TARGET = 1024         # Maximum target difficulty 
+VDIFF_MIN_TARGET = 16           # Minimum target difficulty
+VDIFF_MAX_TARGET = 1024         # Maximum target difficulty
 VDIFF_TARGET_TIME = 15          # Target time per share (i.e. try to get 1 share per this many seconds)
 VDIFF_RETARGET_TIME = 120       # Check to see if we should retarget this often
 VDIFF_VARIANCE_PERCENT = 30     # Allow average time to very this % from target without retarget
@@ -160,21 +160,21 @@ VDIFF_VARIANCE_PERCENT = 30     # Allow average time to very this % from target 
 # Allow external setting of worker difficulty, checks pool_worker table datarow[6] position for target difficulty
 # if present or else defaults to pool target, over rides all other difficulty settings, no checks are made
 # for min or max limits this should be done by your front end software
-ALLOW_EXTERNAL_DIFFICULTY = False 
+ALLOW_EXTERNAL_DIFFICULTY = False
 
-#### Advanced Option ##### 
-# For backwards compatibility, we send the scrypt hash to the solutions column in the shares table 
-# For block confirmation, we have an option to send the block hash in 
-# Please make sure your front end is compatible with the block hash in the solutions table. 
+#### Advanced Option #####
+# For backwards compatibility, we send the scrypt hash to the solutions column in the shares table
+# For block confirmation, we have an option to send the block hash in
+# Please make sure your front end is compatible with the block hash in the solutions table.
 # For People using the MPOS frontend enabling this is recommended. It allows the frontend to compare the block hash to the coin daemon reducing the likelihood of missing share error's for blocks
-SOLUTION_BLOCK_HASH = True      # If enabled, enter the block hash. If false enter the scrypt/sha hash into the shares table 
+SOLUTION_BLOCK_HASH = True      # If enabled, enter the block hash. If false enter the scrypt/sha hash into the shares table
 
 #Pass scrypt hash to submit block check.
 #Use if submit block is returning errors and marking submitted blocks invalid upstream, but the submitted blocks are being a accepted by the coin daemon into the block chain.
 BLOCK_CHECK_SCRYPT_HASH = False
 
 # ******************** Worker Ban Options *********************
-ENABLE_WORKER_BANNING = True    # Enable/disable temporary worker banning 
+ENABLE_WORKER_BANNING = True    # Enable/disable temporary worker banning
 WORKER_CACHE_TIME = 600         # How long the worker stats cache is good before we check and refresh
 WORKER_BAN_TIME = 300           # How long we temporarily ban worker
 INVALID_SHARES_PERCENT = 50     # Allow average invalid shares vary this % before we ban
@@ -186,6 +186,7 @@ NOTIFY_EMAIL_FROM = 'root@localhost'                            # Sender address
 NOTIFY_EMAIL_SERVER = 'localhost'                               # E-Mail sender
 NOTIFY_EMAIL_USERNAME = ''                                      # E-Mail server SMTP logon
 NOTIFY_EMAIL_PASSWORD = ''
+NOTIFY_EMAIL_SERVER_PORT = '465'
 NOTIFY_EMAIL_USETLS = True
 
 # ******************** Memcache Settings *********************
